@@ -4,8 +4,11 @@ function execute() {
 
 	echo "executing..."
 	
-	echo pushd /home/pi/Desktop/WORKS/Chap-06-4
+#	echo pushd /home/pi/Desktop/WORKS/Chap-06-4
 
+	echo pushd /home/pi/Desktop/WORKS/raspberry_fukuda
+	echo pushd /home/pi/Desktop/WORKS/
+	
 } #function execute()
 
 function change_route() {

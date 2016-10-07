@@ -1,0 +1,23 @@
+[20161007_160419]
+
+YUaVe4p3XjemVkca
+
+iwabuchi.k.2010@gmail.com
+
+
+ssh-keygen -t rsa -C "iwabuchi.k.2010@gmail.com"
+eval "$(ssh-agent -s)"
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDh2eZ6cGttXKKzuHH8Hy5iJPzZ9PDk4dhw8zwe2ejscNzvYLFc51F0rdw6iU3GE4XsWDjzbI6GCCNbDeGeI6phcAzba7Y9Cr/YYsz7S/joevPqKKC6V6blq10DAjqh1u7orTT4fxhY2+cdco+XhWFXpwTogFOtnlIPE9KUB5p5u28y47qCX+lblmCpgsr01FHw9kph6G8GBFWnCQXgqKMQ3X0hqYORB4tVH+ofFN4jTX0eD9PCZSal7mU8xWuus/Og6hFbh0d6X3J0jSGSJTlSJke3QWioFduqz+f+FBM51IjX52hhNVKPY0SqEv8HZ+eNtA8o+tPaUQXJb+12nd/h iwabuchi.k.2010@gmail.com
+
+
+D-39
+
+7#1
+----------
+1. init => git
+2. Chap-07: LCD --> trying again
+
+==> started
+
+s9Lna005XQ
