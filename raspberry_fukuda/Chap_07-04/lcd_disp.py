@@ -27,10 +27,45 @@ i2c = smbus.SMBus(i2c_channel)
 
 ##dac = i2c.read_i2c_block_data(
 
+# lcd instance
+lcd = acm1602( 1, 0x50, 4 )
+
+
 ########################################################
 # funcs
 ########################################################
 
+############################
+# init_disp()
+############################
+def init_disp():
+
+    lcd.move_home()
+    
+    lcd.set_cursol( 0 )
+
+    lcd.set_blink( 0 )
+
+    lcd.backlight(1)
+    
+############################
+# display_2()
+############################
+def display_2():
+
+    lcd.move_home()
+    
+    lcd.set_cursol( 0 )
+##    lcd.set_blink( 0 )
+##
+##    lcd.backlight(1)
+
+    lcd.write( "D-39/7#1/s-1" )
+
+    lcd.move( 0x00, 0x01 )
+
+    lcd.write( time.strftime("%H:%M:%S") )
+    
 ############################
 # display()
 ############################
@@ -77,14 +112,18 @@ def pressure():
 ############################
 # operations
 ############################
-# display
-display()
+### display
+##display()
+
+# init display
+init_disp()
 
 while True:
 
     # display
-    display()
-
+##    display()
+    display_2()
+    
     # sleep
 
     time.sleep(1)

@@ -1,0 +1,97 @@
+# /bin/sh
+
+function execute() {
+
+	echo "executing..."
+	
+	echo pushd /home/pi/Desktop/WORKS/Chap-06-4
+
+} #function execute()
+
+function change_route() {
+
+<<'CO'
+	path=$1
+	
+	echo "[$0:${LINENO}] changing to => " $path
+	
+#	echo $LINENO
+
+	# dispatches
+	if [ $path="s" ]; then
+		echo "changing to scarach folder"
+		
+		echo "cd /home/pi/Desktop/WORKS/Chap-06-4"
+		
+		cd /home/pi/Desktop/WORKS/Chap-06-4
+	
+	else
+	
+		echo "unknown param => ${path}"
+		
+	fi
+CO
+
+} # function change_route()
+
+<<'CO'
+PARA=$1
+
+NUM=$#
+
+echo "num of params => " $NUM
+
+#echo (expr $NUM) * 10
+echo NUM is $(($NUM * 10))
+#param_num=$(($NUM))	# w.
+#param_num=$(($NUM)) * 3	# w.
+param_num=$(($NUM))
+
+param_num=$(($param_num * 3))
+
+echo "--------------------------"
+echo param_num is "$param_num"
+CO
+
+<<'CO'
+# if-else
+#if [ $NUM > 0 ]; then
+#if [ $(($NUM * 1)) > 0 ]; then
+if [ $param_num > 0 ]; then
+
+	change_route $PARA
+	
+else
+	echo "no param"
+	
+fi
+
+CO
+
+<<'MEMO'
+echo hi
+
+echo "param => $1"
+
+#set PARAM1 = "$1"	# n.w.
+#PARAM1="$1" #works
+PARAM1=$1 # w.
+
+
+echo "param 1 => $PARAM1"
+#echo $PARAM1
+
+echo "param 1 => " $PARAM1	# w.
+echo "param 1! => " "$PARAM1"	# w.
+
+echo commenting...
+<<'AB'
+this is a comment.
+AB
+echo commented
+
+MEMO
+
+####################################
+execute
+

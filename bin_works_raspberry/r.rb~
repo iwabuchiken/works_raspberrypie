@@ -1,0 +1,8 @@
+#! /usr/bin/ruby
+
+puts "hi"
+
+#puts %x( ls -al )
+
+puts %x( cd "/home/pi/Desktop/WORKS/Chap-06-4" )
+

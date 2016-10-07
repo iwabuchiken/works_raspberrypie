@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo hi
+
+#echo param '$1' is ... $1
+
+echo executing 'git' ...
+echo '	==> ' git $1 $2 $3 $4
+
+git $1 $2 $3 $4
+
+echo done
+
